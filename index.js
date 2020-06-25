@@ -19,6 +19,7 @@ const Bot_Color = '0x008080'
 bot.on('ready', () =>{
     console.clear();
     console.log('- J.A.R.V.I.S. is Online');
+    bot.user.setActivity('j!help', {type: 'LISTENING'}).catch(console.error);
 })
 
 bot.on('message', message=>{
