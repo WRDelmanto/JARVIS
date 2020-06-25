@@ -16,6 +16,11 @@ var version =  '1.5.0'
 const Bot_Creator = 'Besides Tony, WRDelmanto'
 const Bot_Color = '0x008080'
 
+const Bot_Image_1280x720 = new Discord.MessageAttachment('./images/Discord Bot 1280x720.png')
+const Bot_Image_1024x1024 = new Discord.MessageAttachment('./images/Discord Bot 1024x1024.png')
+const Bot_Image_Right = new Discord.MessageAttachment('./images/Discord Bot Right.png')
+const Bot_Image_Left = new Discord.MessageAttachment('./images/Discord Bot Left.png')
+
 bot.on('ready', () =>{
     console.clear();
     console.log('- J.A.R.V.I.S. is Online');
