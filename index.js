@@ -51,7 +51,7 @@ bot.on('message', message=>{
             const simple_poll = new Discord.MessageEmbed()
             .setTitle('Initiate Simple Poll')
             .setColor(Bot_Color)
-            .setFooter(prefix + 'spoll to initiate a simple YES or NO poll')
+            .setFooter('Please type <' + prefix + 'spoll Does Palladium increases Tony`s blood toxicity?> for example')
 
             if (!args[1]){
                 message.channel.send(simple_poll)
@@ -86,7 +86,7 @@ bot.on('message', message=>{
                         const Info_creator = new Discord.MessageEmbed()
                         .setTitle('Creator Information')
                         .addField('Creator: ', (Bot_Creator))
-                        .setThumbnail(message.author.displayAvatarURL())
+                        //.setThumbnail(message.author.displayAvatarURL())
                         .setColor(Bot_Color)
                         message.channel.send(Info_creator);}
                     else
