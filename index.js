@@ -51,8 +51,7 @@ bot.on("message", (message) => {
         .addField(prefix + "info", "Reveal J.A.R.V.I.S. information")
         //.addField(prefix + 'poll', 'Create a augmented poll')
         //.addField('Current Server', message.guild.name, true)
-        .setColor(Bot_Color)
-        .setFooter("J.A.R.V.I.S. " + version);
+        .setColor(Bot_Color);
       //.setFooter('Creator: ' + Bot_Creator)
       message.channel.send(helper);
       break;
@@ -92,6 +91,7 @@ bot.on("message", (message) => {
             prefix + "info creator",
             "We all know Tony needed a little help"
           )
+          .setColor(Bot_Color)
           .setFooter("J.A.R.V.I.S. " + version);
 
         message.channel.send(info);
