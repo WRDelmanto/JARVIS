@@ -111,7 +111,12 @@ bot.on("message", (message) => {
       break;
 
     case "clear":
-      if (!args[1]) {
+      if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+        message.channel.send(
+          "Sir, You are not authorized to access this area."
+        );
+        message.channel.send("Require: MANAGE_MESSAGES permission");
+      } else if (!args[1]) {
         message.channel.send(
           "Please type <" + prefix + "clear 10> for example"
         );
