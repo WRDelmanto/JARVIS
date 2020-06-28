@@ -18,6 +18,12 @@ var version = '1.5.0';
 //                Y = How many functions the bot have
 //                  Z = How many modifications after the last function was added
 
+//Bot Creator Image
+const Bot_Creator_Image_URL = 'https://i.imgur.com/UraTTgc.jpg';
+const Bot_Creator_Image = new Discord.MessageAttachment(
+  './images/Discord Bot Creator Image.png'
+);
+
 //Bot Images
 const Bot_Image_1280x720 = new Discord.MessageAttachment(
   './images/Discord Bot 1280x720.png'
@@ -120,7 +126,7 @@ bot.on('message', (message) => {
         const Info_creator = new Discord.MessageEmbed()
           .setTitle('Creator Information')
           .addField('Creator: ', Bot_Creator)
-          //
+          .setThumbnail(Bot_Creator_Image_URL)
           .setColor(Bot_Color);
         message.channel.send(Info_creator);
       } else message.channel.send('Invalid Arguments');
