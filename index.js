@@ -98,7 +98,7 @@ bot.on('message', (message) => {
     case 'info':
       if (!args[1]) {
         const info = new Discord.MessageEmbed()
-          .setTitle(`J.A.R.V.I.S. Operational Matrix`)
+          .setAuthor('J.A.R.V.I.S. Operational Matrix', Bot_Image_1024x1024_URL)
           .addField(prefix + 'info up', 'Check if J.A.R.V.I.S. is up')
           .addField(
             prefix + 'info creator',
@@ -106,7 +106,7 @@ bot.on('message', (message) => {
           )
           .setColor(Bot_Color)
           .setFooter(
-            `\n Started out, J.A.R.V.I.S. was just a natural language UI. Now he runs ${message.guild.name}. He runs more of the business than anyone besides Pepper.\n \n J.A.R.V.I.S. ${version}`
+            `Started out, J.A.R.V.I.S. was just a natural language UI. Now he runs ${message.guild.name}. He runs more of the business than anyone besides Pepper.${Bot_Info_Spaces}J.A.R.V.I.S. ${version}`
           );
         message.delete({ timeout: Delete_Message_Timeout });
 
