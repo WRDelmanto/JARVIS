@@ -95,8 +95,8 @@ bot.on('message', (message) => {
       message.channel
         .send('📋 ' + '**' + msgArgs + '**' + ' 📋')
         .then((messageReaction) => {
-          messageReaction.react('👍');
-          messageReaction.react('👎');
+          messageReaction.react('❌');
+          messageReaction.react('✅');
           message.delete({ timeout: Delete_Message_Timeout });
         });
       break;
