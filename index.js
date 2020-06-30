@@ -25,15 +25,23 @@ const Bot_Creator_Image = new Discord.MessageAttachment(
 );
 
 //Bot Images
+const Bot_Image_1280x720_URL = 'https://i.imgur.com/ubo9F39.png';
 const Bot_Image_1280x720 = new Discord.MessageAttachment(
   './images/Discord Bot 1280x720.png'
 );
+const Bot_Image_1024x1024_URL = 'https://i.imgur.com/iGrYXKT.png';
 const Bot_Image_1024x1024 = new Discord.MessageAttachment(
   './images/Discord Bot 1024x1024.png'
 );
+const Bot_Image_128x128_URL = 'https://i.imgur.com/RAfx55L.png';
+const Bot_Image_128x128 = new Discord.MessageAttachment(
+  './images/Discord Bot 128x128.png'
+);
+const Bot_Image_Right_URL = 'https://i.imgur.com/JyszwnB.png';
 const Bot_Image_Right = new Discord.MessageAttachment(
   './images/Discord Bot Right.png'
 );
+const Bot_Image_Left_URL = 'https://i.imgur.com/xcLeNj5.png';
 const Bot_Image_Left = new Discord.MessageAttachment(
   './images/Discord Bot Left.png'
 );
