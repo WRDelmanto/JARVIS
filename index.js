@@ -11,6 +11,7 @@ const prefix = 'j!';
 //
 const Delete_Message_Timeout = '50';
 const Bot_Creator = 'Besides Tony, WRDelmanto';
+const Bot_Info_Spaces = '                                         ';
 const Bot_Color = '0x008080';
 var version = '1.5.0';
 //              X.Y.Z
