@@ -101,13 +101,15 @@ bot.on('message', (message) => {
 
       let msgArgs = args.slice(1).join(' ');
 
-      message.channel
-        .send('📋 ' + '**' + msgArgs + '**' + ' 📋')
-        .then((messageReaction) => {
-          messageReaction.react('❌');
-          messageReaction.react('✅');
-          message.delete({ timeout: Delete_Message_Timeout });
-        });
+      const spoll_embed = new Discord.MessageEmbed()
+        .setTitle('📋 ' + msgArgs + ' 📋')
+        .setColor(Bot_Color);
+
+      message.channel.send(spoll_embed).then((messageReaction) => {
+        messageReaction.react('❌').then(() => messageReaction.react('✅'));
+      });
+
+      message.delete({ timeout: Delete_Message_Timeout });
       break;
 
     case 'info':
