@@ -82,7 +82,34 @@ bot.on('ready', () => {
 //---------------------------------------------------------------------------------
 
 //SERVER STATS
+let countChannel = {
+  member: '723535345836359692',
+  serverID: '318468078360854538',
+};
 
+bot.on('guildMemberAdd', (member) => {
+  if (member.guild.id !== countChannel.serverID) return; // Avoid leaking.
+
+  bot.channels.cache
+    .get(countChannel.member)
+    .setName(
+      `👤 Members: ${
+        member.guild.members.cache.filter((m) => !m.user.bot).size
+      }`
+    );
+});
+
+bot.on('guildMemberRemove', (member) => {
+  if (member.guild.id !== countChannel.serverID) return; // Avoid leaking.
+
+  bot.channels.cache
+    .get(countChannel.member)
+    .setName(
+      `👤 Members: ${
+        member.guild.members.cache.filter((m) => !m.user.bot).size
+      }`
+    );
+});
 //---------------------------------------------------------------------------------
 
 //BOT COMMANDS
