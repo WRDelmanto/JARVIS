@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 
 //Bot Variables
-const prefix = 'jh!';
+const prefix = 'j!';
 const Delete_Message_Timeout = '50';
 const Bot_Color = '0x008080';
 
@@ -19,10 +19,10 @@ module.exports = {
       .addField(prefix + 'spoll', 'Create a simple YES or NO poll')
       .addField(prefix + 'coinflip', 'Heads or Tails')
       .addField(prefix + 'ms', 'Show information of a Minecraft Server')
-      .addField(
-        prefix + 'clear',
-        'Delete some lines from your current text channel'
-      )
+      //.addField(
+      //  prefix + 'clear',
+      //  'Delete some lines from your current text channel'
+      //)
       .addField(prefix + 'info', 'Reveal J.A.R.V.I.S. information')
       //.addField(prefix + 'poll', 'Create a augmented poll')
       .setColor(Bot_Color);

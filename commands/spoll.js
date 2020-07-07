@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 
 //Bot Variables
-const prefix = 'jh!';
+const prefix = 'j!';
 const Delete_Message_Timeout = '50';
 const Bot_Color = '0x008080';
 

@@ -37,9 +37,9 @@ var version = '1.7.0.0';
 //---------------------------------------------------------------------------------
 
 //Bot Creator Image
-const Bot_Creator_Image_URL = 'https://i.imgur.com/UraTTgc.jpg';
+const Bot_Creator_Image_URL = 'https://i.imgur.com/JtScC0W.jpg';
 const Bot_Creator_Image = new Discord.MessageAttachment(
-  './images/Discord Bot Creator Image.png'
+  './images/Discord Bot Creator Image 542x542.png'
 );
 //---------------------------------------------------------------------------------
 

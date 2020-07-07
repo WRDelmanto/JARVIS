@@ -2,8 +2,9 @@
 const Discord = require('discord.js');
 
 //Bot Variables
-const prefix = 'jh!';
+const prefix = 'j!';
 const Delete_Message_Timeout = '50';
+const Bot_Creator = 'Besides Tony, WRDelmanto';
 const Bot_Info_Spaces = '                                         ';
 const Bot_Color = '0x008080';
 var version = '1.7.0.0';
@@ -12,6 +13,13 @@ var version = '1.7.0.0';
 //               X = How many functions the bot have
 //                 Y = How many sub functions the bot have
 //                   Z = How many modifications after the last function was added
+//---------------------------------------------------------------------------------
+
+//Bot Creator Image
+const Bot_Creator_Image_URL = 'https://i.imgur.com/JtScC0W.jpg';
+const Bot_Creator_Image = new Discord.MessageAttachment(
+  './images/Discord Bot Creator Image 542x542.png'
+);
 //---------------------------------------------------------------------------------
 
 //Bot Images

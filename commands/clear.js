@@ -1,11 +1,14 @@
 //System Libraries
 const Discord = require('discord.js');
 
+//Bot Variables
+const prefix = 'j!';
+
 //TEST
 module.exports = {
   name: 'clear',
   description: 'Clear some lines in current channel',
-  execute(args) {
+  execute(message, args) {
     if (!message.member.hasPermission('MANAGE_MESSAGES')) {
       message.channel.send('Sir, You are not authorized to access this area.');
       message.channel.send('Require: MANAGE_MESSAGES permission');
