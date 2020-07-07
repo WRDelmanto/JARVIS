@@ -23,6 +23,10 @@ module.exports = {
       //  prefix + 'clear',
       //  'Delete some lines from your current text channel'
       //)
+      .addField(
+        prefix + 'server',
+        `Reveal ${message.channel.guild.name} information`
+      )
       .addField(prefix + 'info', 'Reveal J.A.R.V.I.S. information')
       //.addField(prefix + 'poll', 'Create a augmented poll')
       .setColor(Bot_Color);
