@@ -115,54 +115,65 @@ bot.on('guildMemberRemove', (member) => {
 
 //BOT COMMANDS
 bot.on('message', async (message) => {
-  let args = message.content.substring(prefix.length).split(' ');
+  const Bot_Commands_Channel = '🤖_iron-legion_🤖';
 
-  switch (args[0]) {
-    //HELP
-    case 'help':
-      bot.commands.get('help').execute(message, args);
-      break;
-    //---------------------------------------------------------------------------------
+  if (
+    message.content.startsWith(prefix) &&
+    message.channel.name != Bot_Commands_Channel
+  ) {
+    message.channel.send(
+      `You are not authorized to access this area. Please run the commands on ${Bot_Commands_Channel}.`
+    );
+  } else {
+    let args = message.content.substring(prefix.length).split(' ');
 
-    //SPOLL
-    case 'spoll':
-      bot.commands.get('spoll').execute(message, args);
-      break;
-    //---------------------------------------------------------------------------------
+    switch (args[0]) {
+      //HELP
+      case 'help':
+        bot.commands.get('help').execute(message, args);
+        break;
+      //---------------------------------------------------------------------------------
 
-    //INFO
-    case 'info':
-      bot.commands.get('info').execute(message, args);
-      break;
-    //---------------------------------------------------------------------------------
+      //SPOLL
+      case 'spoll':
+        bot.commands.get('spoll').execute(message, args);
+        break;
+      //---------------------------------------------------------------------------------
 
-    //CLEAR
-    case 'clear':
-      bot.commands.get('clear').execute(message, args);
-      break;
-    //---------------------------------------------------------------------------------
+      //INFO
+      case 'info':
+        bot.commands.get('info').execute(message, args);
+        break;
+      //---------------------------------------------------------------------------------
 
-    //MS
-    case 'ms':
-      bot.commands.get('ms_embed').execute(message, args);
-      break;
-    //---------------------------------------------------------------------------------
+      //CLEAR
+      case 'clear':
+        bot.commands.get('clear').execute(message, args);
+        break;
+      //---------------------------------------------------------------------------------
 
-    //COINFLIP
-    case 'coinflip':
-      bot.commands.get('coinflip').execute(message, args);
-      break;
-    //---------------------------------------------------------------------------------
+      //MS
+      case 'ms':
+        bot.commands.get('ms_embed').execute(message, args);
+        break;
+      //---------------------------------------------------------------------------------
 
-    //SERVER
-    case 'server':
-      bot.commands.get('server').execute(message, args);
-      break;
-    //---------------------------------------------------------------------------------
+      //COINFLIP
+      case 'coinflip':
+        bot.commands.get('coinflip').execute(message, args);
+        break;
+      //---------------------------------------------------------------------------------
 
-    //TEST
+      //SERVER
+      case 'server':
+        bot.commands.get('server').execute(message, args);
+        break;
+      //---------------------------------------------------------------------------------
 
-    //---------------------------------------------------------------------------------
+      //TEST
+
+      //---------------------------------------------------------------------------------
+    }
   }
 });
 //---------------------------------------------------------------------------------
