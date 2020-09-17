@@ -124,6 +124,13 @@ bot.on('message', async (message) => {
     message.channel.send(
       `You are not authorized to access this area. Please run the commands on ${Bot_Commands_Channel}.`
     );
+  } else if (
+    (message.content.startsWith('_') || message.content.startsWith('+')) &&
+    message.channel.name != Bot_Commands_Channel
+  ) {
+    message.channel.send(
+      `Sir, please may I request for you to send the commands on ${Bot_Commands_Channel}.`
+    );
   } else {
     let args = message.content.substring(prefix.length).split(' ');
 
