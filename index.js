@@ -129,7 +129,7 @@ bot.on('message', async (message) => {
     message.channel.name != Bot_Commands_Channel
   ) {
     message.channel.send(
-      `Sir, please may I request for you to send the commands on ${Bot_Commands_Channel}.`
+      `Sir, please may I request you to send the commands on ${Bot_Commands_Channel}.`
     );
   } else {
     let args = message.content.substring(prefix.length).split(' ');
