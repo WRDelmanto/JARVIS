@@ -16,6 +16,7 @@ module.exports = {
   execute(message, args) {
     const helper = new Discord.MessageEmbed()
       .setAuthor('What can I do for you today sir?', Bot_Image_1024x1024_URL)
+      .addField(prefix + 'DJ', 'Make you a DJ!')
       .addField(prefix + 'spoll', 'Create a simple YES or NO poll')
       .addField(prefix + 'coinflip', 'Heads or Tails')
       .addField(prefix + 'ms', 'Show information of a Minecraft Server')
