@@ -16,19 +16,20 @@ module.exports = {
   execute(message, args) {
     const helper = new Discord.MessageEmbed()
       .setAuthor('What can I do for you today sir?', Bot_Image_1024x1024_URL)
-      .addField(prefix + 'DJ', 'Make you a DJ!')
-      .addField(prefix + 'spoll', 'Create a simple YES or NO poll')
-      .addField(prefix + 'coinflip', 'Heads or Tails')
-      .addField(prefix + 'ms', 'Show information of a Minecraft Server')
-      //.addField(
-      //  prefix + 'clear',
-      //  'Delete some lines from your current text channel'
-      //)
+      .addField(prefix + 'pv', 'Send this help command as a private message.')
+      .addField(prefix + 'DJ', 'Make you a DJ!.')
+      .addField(prefix + 'spoll', 'Create a simple YES or NO poll.')
+      .addField(prefix + 'coinflip', 'Heads or Tails.')
+      .addField(prefix + 'ms', 'Show information of a Minecraft Server.')
+      .addField(
+        prefix + 'clear',
+        'Delete some lines from your current text channel.'
+      )
       .addField(
         prefix + 'server',
-        `Reveal ${message.channel.guild.name} information`
+        `Reveal ${message.channel.guild.name} information.`
       )
-      .addField(prefix + 'info', 'Reveal J.A.R.V.I.S. information')
+      .addField(prefix + 'info', 'Reveal J.A.R.V.I.S. information.')
       //.addField(prefix + 'poll', 'Create a augmented poll')
       .setColor(Bot_Color);
     message.channel.send(helper);
