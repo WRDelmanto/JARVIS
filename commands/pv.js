@@ -32,7 +32,7 @@ module.exports = {
       .addField(prefix + 'info', 'Reveal J.A.R.V.I.S. information.')
       //.addField(prefix + 'poll', 'Create a augmented poll')
       .setColor(Bot_Color);
-    message.author.send(pv_helper);
+    message.author.send(helper);
     message.delete({ timeout: Delete_Message_Timeout });
   },
 };
