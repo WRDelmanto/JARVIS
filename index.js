@@ -177,6 +177,12 @@ bot.on('message', async (message) => {
         break;
       //---------------------------------------------------------------------------------
 
+      //RULES
+      case 'rules':
+        bot.commands.get('rules').execute(message, args);
+        break;
+      //---------------------------------------------------------------------------------
+
       //DJ
       case 'dj':
         bot.commands.get('DJ').execute(message, args);
