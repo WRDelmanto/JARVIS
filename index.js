@@ -115,7 +115,7 @@ bot.on('guildMemberRemove', (member) => {
 
 //BOT COMMANDS
 bot.on('message', async (message) => {
-  const Bot_Commands_Channel = '🤖_iron-legion_🤖';
+  const Bot_Commands_Channel = '🤖┆iron-legion';
 
   if (
     message.content.startsWith(prefix) &&
