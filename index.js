@@ -94,7 +94,7 @@ bot.on('guildMemberAdd', (member) => {
   bot.channels.cache
     .get(countChannel.member)
     .setName(
-      `👤 Members: ${
+      `👤 ┆ Members: ${
         member.guild.members.cache.filter((m) => !m.user.bot).size
       }`
     );
@@ -106,7 +106,7 @@ bot.on('guildMemberRemove', (member) => {
   bot.channels.cache
     .get(countChannel.member)
     .setName(
-      `👤 Members: ${
+      `👤 ┆ Members: ${
         member.guild.members.cache.filter((m) => !m.user.bot).size
       }`
     );
