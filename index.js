@@ -116,10 +116,12 @@ bot.on('guildMemberRemove', (member) => {
 //BOT COMMANDS
 bot.on('message', async (message) => {
   const Bot_Commands_Channel = '🤖┆iron-legion';
+  const Bot_Rules_Channel = '📜┆rules';
 
   if (
     message.content.startsWith(prefix) &&
-    message.channel.name != Bot_Commands_Channel
+    message.channel.name != Bot_Commands_Channel &&
+    message.channel.name != Bot_Rules_Channel
   ) {
     message.channel.send(
       `You are not authorized to access this area. Please run the commands on ${Bot_Commands_Channel}.`
