@@ -124,96 +124,76 @@ bot.on('guildMemberRemove', (member) => {
 
 //BOT COMMANDS
 bot.on('message', async (message) => {
-  const Bot_Commands_Channel = '🤖┆iron-legion';
-  const Bot_Rules_Channel = '📜┆rules';
+  let args = message.content.substring(prefix.length).split(' ');
 
-  if (
-    message.content.startsWith(prefix) &&
-    message.channel.name != Bot_Commands_Channel &&
-    message.channel.name != Bot_Rules_Channel
-  ) {
-    message.channel.send(
-      `You are not authorized to access this area. Please run the commands on ${Bot_Commands_Channel}.`
-    );
-  } else if (
-    (message.content.startsWith('_') || message.content.startsWith('+')) &&
-    message.channel.name != Bot_Commands_Channel
-  ) {
-    message.channel.send(
-      `Sir, please may I request you to send the commands on ${Bot_Commands_Channel}.`
-    );
-  } else {
-    let args = message.content.substring(prefix.length).split(' ');
+  switch (args[0]) {
+    //HELP
+    case 'help':
+      bot.commands.get('help').execute(message, args);
+      break;
+    //---------------------------------------------------------------------------------
 
-    switch (args[0]) {
-      //HELP
-      case 'help':
-        bot.commands.get('help').execute(message, args);
-        break;
-      //---------------------------------------------------------------------------------
+    //SPOLL
+    case 'spoll':
+      bot.commands.get('spoll').execute(message, args);
+      break;
+    //---------------------------------------------------------------------------------
 
-      //SPOLL
-      case 'spoll':
-        bot.commands.get('spoll').execute(message, args);
-        break;
-      //---------------------------------------------------------------------------------
+    //INFO
+    case 'info':
+      bot.commands.get('info').execute(message, args);
+      break;
+    //---------------------------------------------------------------------------------
 
-      //INFO
-      case 'info':
-        bot.commands.get('info').execute(message, args);
-        break;
-      //---------------------------------------------------------------------------------
+    //CLEAR
+    case 'clear':
+      bot.commands.get('clear').execute(message, args);
+      break;
+    //---------------------------------------------------------------------------------
 
-      //CLEAR
-      case 'clear':
-        bot.commands.get('clear').execute(message, args);
-        break;
-      //---------------------------------------------------------------------------------
+    //MS
+    case 'ms':
+      bot.commands.get('ms_embed').execute(message, args);
+      break;
+    //---------------------------------------------------------------------------------
 
-      //MS
-      case 'ms':
-        bot.commands.get('ms_embed').execute(message, args);
-        break;
-      //---------------------------------------------------------------------------------
+    //COINFLIP
+    case 'coinflip':
+      bot.commands.get('coinflip').execute(message, args);
+      break;
+    //---------------------------------------------------------------------------------
 
-      //COINFLIP
-      case 'coinflip':
-        bot.commands.get('coinflip').execute(message, args);
-        break;
-      //---------------------------------------------------------------------------------
+    //SERVER
+    case 'server':
+      bot.commands.get('server').execute(message, args);
+      break;
+    //---------------------------------------------------------------------------------
 
-      //SERVER
-      case 'server':
-        bot.commands.get('server').execute(message, args);
-        break;
-      //---------------------------------------------------------------------------------
+    //RULES
+    case 'rules':
+      bot.commands.get('rules').execute(message, args);
+      break;
+    //---------------------------------------------------------------------------------
 
-      //RULES
-      case 'rules':
-        bot.commands.get('rules').execute(message, args);
-        break;
-      //---------------------------------------------------------------------------------
+    //DJ
+    case 'dj':
+      bot.commands.get('DJ').execute(message, args);
+      break;
 
-      //DJ
-      case 'dj':
-        bot.commands.get('DJ').execute(message, args);
-        break;
+    case 'DJ':
+      bot.commands.get('DJ').execute(message, args);
+      break;
+    //---------------------------------------------------------------------------------
 
-      case 'DJ':
-        bot.commands.get('DJ').execute(message, args);
-        break;
-      //---------------------------------------------------------------------------------
+    //PV
+    case 'pv':
+      bot.commands.get('pv').execute(message, args);
+      break;
+    //---------------------------------------------------------------------------------
 
-      //PV
-      case 'pv':
-        bot.commands.get('pv').execute(message, args);
-        break;
-      //---------------------------------------------------------------------------------
+    //TEST
 
-      //TEST
-
-      //---------------------------------------------------------------------------------
-    }
+    //---------------------------------------------------------------------------------
   }
 });
 //---------------------------------------------------------------------------------
