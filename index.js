@@ -79,7 +79,16 @@ bot.on('ready', () => {
 //---------------------------------------------------------------------------------
 
 //WELLCOME CHANNEL/MESSAGE
+bot.on('guildMemberAdd', (member) => {
+  const Welcome_Channel = member.guild.channels.cache.find(
+    (channel) => channel.name === '✨┆welcome'
+  );
 
+  if (!Welcome_Channel) return;
+
+  Welcome_Channel.send(`- Sir, it seems like another guest has arrived.`);
+  Welcome_Channel.send(`- Please, ${member}, make yourself at home.`);
+});
 //---------------------------------------------------------------------------------
 
 //SERVER STATS
