@@ -24,9 +24,9 @@ module.exports = {
 				.setFooter(
 					'Please type <' +
 						prefix +
-						'suggest Create a new element to substitute the Palladium> for example.'
+						'suggestion Create a new element to substitute the Palladium> for example.'
 				);
-			message.Suggestion_Channel.send(Suggestion_Embed_Helper);
+			message.channel.send(Suggestion_Embed_Helper);
 		} else {
 			let Suggestion_Args = args.slice(1).join(' ');
 
