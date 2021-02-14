@@ -86,8 +86,18 @@ bot.on('guildMemberAdd', (member) => {
 
 	if (!Welcome_Channel) return;
 
-	Welcome_Channel.send(`- Sir, it seems like another guest has arrived.`);
-	Welcome_Channel.send(`- Please, ${member}, make yourself at home.`);
+	const Welcome_Embed = new Discord.MessageEmbed()
+		.setAuthor(
+			member.user.username,
+			member.user.displayAvatarURL({ dynamic: true })
+		)
+		.addField(
+			`- Sir, it seems like another guest has arrived.`,
+			`- Please, ${member}, make yourself at home.`
+		)
+		.setColor(Bot_Color);
+
+	Welcome_Channel.send(Welcome_Embed);
 });
 //---------------------------------------------------------------------------------
 
