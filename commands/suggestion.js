@@ -36,7 +36,8 @@ module.exports = {
 					message.author.tag,
 					message.author.displayAvatarURL({ dynamic: true })
 				)
-				.setDescription(Suggestion_Args);
+				.setDescription(Suggestion_Args)
+				.setTimestamp();
 
 			Suggestion_Channel.send(Suggestion_embed)
 				.then((msg) => {
