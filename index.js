@@ -101,6 +101,29 @@ bot.on('guildMemberAdd', (member) => {
 });
 //---------------------------------------------------------------------------------
 
+//GOODBYE CHANNEL/MESSAGE
+bot.on('guildMemberRemove', (member) => {
+	const Goodbye_Channel = member.guild.channels.cache.find(
+		(channel) => channel.name === '❌┆goodbye'
+	);
+
+	if (!Goodbye_Channel) return;
+
+	const Goodbye_Embed = new Discord.MessageEmbed()
+		.setAuthor(
+			member.user.username,
+			member.user.displayAvatarURL({ dynamic: true })
+		)
+		.addField(
+			`- Sir, it seems like another guest has left.`,
+			`- The member ${member} was added to the Clean Slate Protocol.`
+		)
+		.setColor(Bot_Color);
+
+	Goodbye_Channel.send(Goodbye_Embed);
+});
+//---------------------------------------------------------------------------------
+
 //SERVER STATS
 let countChannel = {
 	member: '723535345836359692',
