@@ -1,4 +1,4 @@
-//
+//Just open the Terminal and write "node ." to start J.A.R.V.I.S.
 
 //System Libraries
 const Discord = require('discord.js');
@@ -24,7 +24,7 @@ for (const file of commandFiles) {
 
 //Bot Variables
 const prefix = 'j!';
-//
+const token = 'OTIxMTUzNDIyNjEzNDE4MDA0.Ybuw-g.JXnZMmNCL6GRTrmEyV_e_-V5vUE';
 const Delete_Message_Timeout = '50';
 const Bot_Creator = 'Besides Tony, WRDelmanto';
 const Bot_Info_Spaces = '                                         ';
@@ -126,8 +126,8 @@ bot.on('guildMemberRemove', (member) => {
 
 //SERVER STATS
 let countChannel = {
-	member: '723535345836359692',
-	serverID: '318468078360854538',
+	member: '728275581543645236',
+	serverID: '725053854814830603',
 };
 
 bot.on('guildMemberAdd', (member) => {
@@ -231,10 +231,77 @@ bot.on('message', async (message) => {
 		//---------------------------------------------------------------------------------
 
 		//TEST
-
+		case 'test':
+			bot.commands.get('test').execute(message, args);
+			break;
 		//---------------------------------------------------------------------------------
 	}
 });
 //---------------------------------------------------------------------------------
 
-bot.login(process.env.token);
+//BOT LOGIN
+bot.login(token);
+//---------------------------------------------------------------------------------
+
+// Goodbye Message = 'As always sir, a great pleasure watching you work.'
+// message.author.username
+//.addField('Current Server', message.guild.name, true)
+//"Sir, please may I request just a few hours to calibrate-"
+//"As you wish, sir. I've also prepared a safety briefing for you to entirely ignore."
+//"Good evening, Colonel. Can I give you a lift?"
+//"Started out, J.A.R.V.I.S. was just a natural language UI. Now he runs the Iron Legion. He runs more of the business than anyone besides Pepper."
+//"I'll continue to run variations on the interface, but you should probably prepare for your guests. I'll notify you if there are any developments."
+//"Enjoy yourself, sir."
+//"I believe your intentions to be hostile."
+//"That's J.A.R.V.I.S.. He runs the house."
+//"J.A.R.V.I.S., are you up?"
+//"For you sir, always."
+
+// Role verification
+//if(!message.member.roles.find(r.name === 'Rolename')){
+//    message.channel.send('This requires the role: Rolename')
+// }
+
+// Role verification New?
+//if(!message.member.roles.cache.find(role => role.name === 'ADM')){
+//message.channel.send('This requires the role: ADM');
+//}
+
+// Permission verification
+//if(!message.member.hasPermission('Administrator')){
+//    message.channel.send('This requires the permission: Administrator')
+
+//Online Members
+// First we use guild.members.fetch to make sure all members are cached
+//message.guild.members.fetch().then((fetchedMembers) => {
+//const totalOnline = fetchedMembers.filter(
+//  (member) => member.presence.status === 'online'
+// );
+// We now have a collection with all online member objects in the totalOnline variable
+//message.channel.send(
+//  `There are currently ${totalOnline.size} members online in this guild!`
+// );
+// });
+
+//---------------------------------------------------------------------------------
+//WELLCOME CHANNEL/MESSAGE
+//bot.on('guildMemberAdd', (member) => {
+//  const Welcome_Channel = member.guild.channels.cache.find(
+//    (channel) => channel.name === 'welcome'
+//);
+
+//  if (!Welcome_Channel) return;
+
+//  Welcome_Channel.send(`- Sir, it seems like another guest has arrived.`);
+//Welcome_Channel.send(`- Please, ${member}, make yourself at home.`);
+//});
+//---------------------------------------------------------------------------------
+
+//Role Add on MemberADD
+//const Role = member.guild.roles.cache.find((role) => role.name === 'DJ');
+//member.roles.add(Role);
+//---------------------------------------------------------------------------------
+
+//Bot Owner (Not Working)
+//.setBotOwner('202948020009041920');
+//---------------------------------------------------------------------------------
