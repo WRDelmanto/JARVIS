@@ -25,7 +25,7 @@ const Bot_Creator_Image = new Discord.MessageAttachment(
 //Bot Images
 const Bot_Image_1024x1024_URL = 'https://i.imgur.com/iGrYXKT.png';
 
-//TEST
+//Info
 module.exports = {
   name: 'info',
   description: 'Reveals J.A.R.V.I.S. Information',
