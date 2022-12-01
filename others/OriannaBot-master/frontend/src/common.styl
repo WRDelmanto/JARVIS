@@ -1,0 +1,129 @@
+*
+    box-sizing border-box
+
+.box
+    max-width 800px
+    width 800px
+    border 1px solid #cdd2d2
+    box-shadow 0 1px #dcdfdf
+    background-color #fdfdfd
+    margin-top 20px
+    padding 0
+    font-family Roboto
+
+    & > .header
+        padding 10px
+        background-color white
+        border-bottom 1px solid #cdd2d2
+
+        h2
+            font-size 24px
+            font-weight 300
+            margin 0
+
+    & > .body
+        padding 10px
+
+.loader, .loader:before, .loader:after
+    border-radius 50%
+    width 2.5em
+    height 2.5em
+    animation-fill-mode both
+    animation load 1.8s infinite ease-in-out
+
+.loader
+    color #64ccff
+    font-size 10px
+    margin 80px auto
+    position relative
+    opacity 0.6
+    text-indent -9999em
+    transform translateZ(0) // hardware accel
+    animation-delay -0.16s
+
+    &:before, &:after
+        content ''
+        position absolute
+        top 0
+
+    &:before
+        left -3.5em
+        animation-delay -0.32s
+
+    &:after
+        left 3.5em
+
+@keyframes load
+    0%, 80%, 100%
+        box-shadow 0 2.5em 0 -1.3em
+    40%
+        box-shadow 0 2.5em 0 0
+
+.fade-enter-active, .fade-leave-active
+    transition opacity 0.2s ease
+
+.fade-enter, .fade-leave-to
+    opacity 0
+
+input[type=text], input[type=number], input[type=date], select, textarea
+    box-sizing border-box
+    height 40px
+    width 100%
+    vertical-align middle
+    display inline-block
+    outline none
+    border 1px solid #c1c1c1
+    padding 0 10px
+    background #fff
+    color #666
+    font-family Roboto
+    transition border-color 0.2s ease
+
+    &:disabled
+        background #dfdfdf
+        cursor not-allowed
+
+    &::-webkit-input-placeholder
+        color #c7c7c7
+        font-family Roboto
+        font-weight 300
+
+    &:focus
+        border-color #1f9fde
+        outline none
+
+select
+    border-radius 0
+    -webkit-appearance none
+    background-image url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%201%209%206%2015%206%22%3E%3C%2Fpolygon%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%2013%209%208%2015%208%22%3E%3C%2Fpolygon%3E%0A%3C%2Fsvg%3E%0A")
+    background-repeat no-repeat
+    background-position 100% 50%
+
+input[type=checkbox]
+    display inline-block
+    height 16px
+    width 16px
+    transition 0.2s ease
+    -webkit-appearance none
+    border 1px solid #ccc
+
+    &:focus
+        border-color #1e87f0
+        outline none
+
+    &:checked
+        border-color transparent
+        background url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23fff%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A") 50% 50% no-repeat
+        background-color #1e87f0
+
+// Medium devices.
+@media only screen and (min-width: 780px) and (max-width: 1050px)
+    .box
+        max-width 500px
+        width 500px
+
+// Small devices.
+@media only screen and (max-width: 780px)
+    .box
+        width 90vw
+        max-width 90vw

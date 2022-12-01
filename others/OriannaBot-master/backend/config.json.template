@@ -1,0 +1,56 @@
+{
+    "riot": {
+        "lolApiKey": "<<riot games API key>>",
+        "tftApiKey": "<<riot games API key>>",
+        "tiers": ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
+        "rankedQueueTranslationKeys": {
+            "RANKED_SOLO_5x5": "queue_ranked_solo",
+            "RANKED_FLEX_SR": "queue_ranked_flex",
+            "RANKED_TFT": "queue_ranked_tft",
+            "ANY": "queue_ranked_any",
+            "HIGHEST": "queue_ranked_highest",
+            "HIGHEST_TFT": "queue_ranked_highest_tft"
+        }
+    },
+    "discord": {
+        "clientId": "<<discord application client id>>",
+        "clientSecret": "<<discord application client secret>>",
+        "owner": "<<discord user id of the owner of the bot (your own id)>>",
+        "token": "<<discord bot token>>",
+        "emoteServers": ["<<potential list of discord server ids where to find bot servers. leave as an empty array to disable emotes completely>>"]
+    },
+    "reddit": {
+        "clientId": "<<reddit client id>>",
+        "clientSecret": "<<reddit client secret>>"
+    },
+    "web": {
+        "url": "<<publicly accessible URL where orianna is hosted, is prepended to messages like @Ori edit>>",
+        "port": "<<port on which the web server interface will listen>>"
+    },
+    "db": {
+        "host": "<<hostname of postgres database>>",
+        "database": "<<database name of postgres database>>",
+        "user": "<<username of postgres database>>",
+        "password": "<<password of postgres database>>",
+        "port": 5432
+    },
+    "elastic": {
+        "enabled": false,
+        "host": "<<if enabled, the host URL of an elasticsearch instance>>",
+        "auth": "<<if enabled, the username:pass of the specified elasticsearch instance>>"
+    },
+    "redis": {
+        "host": "127.0.0.1",
+        "port": 6379
+    },
+    "updater": {
+        "masteryGamesInterval": 60000,
+        "masteryGamesAmount": 1,
+        "rankedTierInterval": 60000,
+        "rankedTierAmount": 1,
+        "accountInterval": 60000,
+        "accountAmount": 1
+    },
+    "badges": {},
+    "ffmpeg": "<<path to ffmpeg binary (ffmpeg.exe/ffmpeg), required for producing promotion animations>>"
+}
