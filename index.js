@@ -23,7 +23,7 @@ for (const file of commandFiles) {
 //---------------------------------------------------------------------------------
 
 //Bot Variables
-const TOKEN = "NzI1MTYzNDk3NzI1NDkzMzI4.Gur57O.KWY8mRtPVeM_RHVWuGeV_FgE0iRK6vFQXRu9_o"
+const TOKEN = ""
 const prefix = 'j!';
 //
 const Delete_Message_Timeout = '50';
